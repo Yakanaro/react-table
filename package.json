@@ -1,0 +1,23 @@
+{
+  "name": "react-table",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yakanaro/react-table.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yakanaro/react-table/issues"
+  },
+  "homepage": "https://github.com/Yakanaro/react-table#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
