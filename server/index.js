@@ -14,7 +14,7 @@ const getFilePath = (filename) => path.join(__dirname, '..', 'server/files', fil
 
 const whitelist = ['http://localhost:3000'];
 const corsOptions = {
-  origin: function (origin, callback) {
+  origin(origin, callback) {
     if (!origin || whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
@@ -26,7 +26,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 app.get('/', (req, res) => {
-  fs.readFile(getFilePath('data.json'), 'utf8', function (err, data) {
+  fs.readFile(getFilePath('data.json'), 'utf8', (err, data) => {
     res.send(data);
     if (err) {
       console.log('error', err);
@@ -38,5 +38,5 @@ app.listen(PORT, () => {
   console.log(`Server starting on port ${PORT}`);
 });
 
-//  Добавить инфу в файл джсона чтобы было 20
-//  Разбораться в докере по возможности
+// eslint-disable-next-line import/prefer-default-export
+export const server = app;

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import './App.css';
 import BootstrapTable from 'react-bootstrap-table-next';
 import cellEditFactory, { type } from 'react-bootstrap-table2-editor';
 import axios from 'axios';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
 
 function App() {
   const [data, setData] = useState([]);
@@ -41,17 +42,24 @@ function App() {
   ];
 
   return (
-    <div className='App'>
-      <BootstrapTable
-        keyField='id'
-        data={data}
-        columns={columns}
-        cellEdit={cellEditFactory({
-          mode: 'click',
-          blurToSave: true,
-        })}
-      />
-    </div>
+    <>
+      <Navbar expand='lg' variant='dark' bg='dark'>
+        <Container>
+          <Navbar.Brand href='#'>React-table</Navbar.Brand>
+        </Container>
+      </Navbar>
+      <div className='App'>
+        <BootstrapTable
+          keyField='id'
+          data={data}
+          columns={columns}
+          cellEdit={cellEditFactory({
+            mode: 'click',
+            blurToSave: true,
+          })}
+        />
+      </div>
+    </>
   );
 }
 
