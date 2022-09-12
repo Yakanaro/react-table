@@ -1,0 +1,10 @@
+version: '3'
+services:
+  server:
+    build: .
+    ports:
+      - "3001:3001"
+  react-table:
+    build: ./frontend
+    ports:
+      - "3000:3000"    
