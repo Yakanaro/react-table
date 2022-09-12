@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
-import cellEditFactory, { type } from 'react-bootstrap-table2-editor';
+import cellEditFactory from 'react-bootstrap-table2-editor';
 import axios from 'axios';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
